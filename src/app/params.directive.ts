@@ -4,9 +4,9 @@ import { Directive, ElementRef } from '@angular/core';
   selector: '[appPrams]'
 })
 export class PramsDirective {
-  constructor(private Element: ElementRef) {
-    this.Element.nativeElement.style.color = "red";
-    console.log(this.Element)
+  constructor(private el: ElementRef) {
+    this.el.nativeElement.style.color = "red";
+    console.log(this.el)
   }
 
 }
