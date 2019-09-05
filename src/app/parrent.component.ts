@@ -1,21 +1,20 @@
-import { Component } from "@angular/core"
-
+import { Component, ViewChild } from "@angular/core"
+import { ChildComponent } from './child.component'
 @Component({
     selector: 'app-parrent',
     template: `
-        <h2>{{ value }}</h2>
-        <app-child (myClick) = onClickAdd($event)></app-child>
+        <button (click)="addForChild()">Add for child</button>
+        <app-child></app-child>
     `,
 })
 
 export class ParrentComponent {
-    value = 0;
+    //Sau khi import ChildComponent vào, khai báo biến myChild có kiểu dữ liệu là ChildComponent
+    //tức là biến myChild sẽ có khả năng tham chiếu được đến các thuộc tính và phương thức của ChildComponent
+    @ViewChild(ChildComponent)
+    myChild: ChildComponent;
 
-    onClickAdd(isAdd) {
-        if (isAdd) {
-            this.value++
-        } else {
-            this.value--
-        }
+    addForChild() {
+        this.myChild.value++
     }
 }
