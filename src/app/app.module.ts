@@ -1,22 +1,18 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HighlightDirective } from './highlight.directive';
-import { ChangeTextDirective } from './change-text.directive';
-import { PramsDirective } from './params.directive';
+import { PersonComponent } from './person/person.component';
+import { ListPersonComponent } from './list-person/list-person.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HighlightDirective,
-    ChangeTextDirective,
-    PramsDirective
+    PersonComponent,
+    ListPersonComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
