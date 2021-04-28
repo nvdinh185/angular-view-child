@@ -15,6 +15,6 @@ export class ParrentComponent {
     myChild: ChildComponent;
 
     addForChild() {
-        this.myChild.value++
+        this.myChild.value++;
     }
 }
